@@ -1,0 +1,103 @@
+* {
+   text-transform: uppercase;
+   filter: invert();
+}
+
+body {
+   font-family: 'Futura', sans-serif;
+   background-color: #f4f4f4;
+   margin: 0;
+   padding: 0;
+}
+
+header {
+   background-color: #333;
+   padding: 10px;
+   text-align: center;
+}
+
+header svg {
+   max-width: 100%;
+   height: 50px;
+}
+
+#orderSection {
+   margin-top: 40px;
+   min-height: 80vh;
+   position: relative;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+}
+
+#order {
+   width: 80vw;
+   padding: 40px;
+   background-color: #000;
+   border-radius: 15px;
+   box-shadow: 10px 0 20px rgba(226, 188, 188, 0.847);
+   box-sizing: border-box;
+   display: flex;
+   flex-direction: column;
+   margin: auto;
+   font-size: 20px;
+   color: whitesmoke;
+   opacity: 0.85;
+}
+
+#orderTable {
+   width: 100%;
+}
+
+#orderTable caption {
+   font-size: 24px;
+   margin-bottom: 20px;
+   text-align: center;
+}
+
+#orderTable td {
+   padding: 10px;
+}
+
+#orderTable .rightA {
+   text-align: right;
+}
+
+#order input[type="text"] {
+   width: 100%;
+   padding: 10px;
+   margin-bottom: 15px;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   box-sizing: border-box;
+   font-family: 'Futura', monospace;
+   font-size: medium;
+}
+
+#orderTable input[type="text"][readonly] {
+   background-color: #ddd;
+}
+
+#subButton {
+   background-color: #333;
+   color: #f4f4f4;
+   padding: 15px 20px; /* Increased padding for a larger button */
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 1.2em; /* Increased font size */
+   display: block; /* Make the button a block element */
+   margin: 0 auto; /* Center the button horizontally */
+}
+
+#subButton:hover {
+   background-color: #000;
+   color: white;
+   box-shadow: 10px 0 20px rgba(226, 188, 188, 0.847);
+}
+
+#subButtonLink {
+   display: block; /* Ensure the link takes the full width available */
+   text-align: center; /* Center the button within the link */
+   text-decoration: none; /* Remove default underline */
+}

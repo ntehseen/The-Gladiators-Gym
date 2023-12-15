@@ -1,0 +1,171 @@
+@font-face {
+    font-family: Futura;
+    src: url(./Futura-Bold.ttf);
+}
+
+@font-face {
+    font-family: Gilroy;
+    src: url(./Gilroy-Medium.ttf);
+}
+    * {
+        filter: invert();
+        font-family: 'Futura', sans-serif;
+        text-transform: uppercase;
+    }
+    
+    body {
+        font-family: 'Futura', sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+
+    }
+    
+    header {
+        background-color: #333;
+        padding: 10px;
+        text-align: center;
+    }
+    
+    header svg {
+        max-width: 100%;
+        height: 50px;
+    }
+    
+    #membershipFormSection {
+        margin-top: 40px;
+        min-height: 80vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    #membershipForm {
+   
+        width: 80vw;
+        padding: 40px;
+        background-color: #000;
+        border-radius: 15px;
+        box-shadow: 10px 0 20px rgba(226, 188, 188, 0.847);
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        font-size: 20px;
+        color: whitesmoke;
+        opacity: 0.85;
+    }
+    
+    #membershipForm p {
+        margin-top: 0.3vw;
+        font-size: 1vw;
+        text-align: center;
+    }
+    
+    #membershipForm h1 {
+        font-size: 8.7vw;
+        text-transform: uppercase;
+        font-family: 'Futura';
+        line-height: 7vw;
+        letter-spacing: -8px;
+        margin-top: 20px;
+        margin-bottom: 6px;
+        text-align: center;
+        gap: 4px;
+    }
+    
+    #membershipForm h4 {
+        font-size: 2.5vw;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        font-family: 'Ubuntu', sans-serif;
+        display: flex;
+    }
+    
+    #membershipForm label {
+        display: flex;
+        margin-bottom: 10px;
+        font-size: 1.6vw;
+        background-color: #777;
+        font-family: monospace;
+        text-transform: uppercase;
+    }
+    
+    #membershipForm font {
+        font-family: 'Ubuntu', sans-serif;
+        text-transform: uppercase;
+    }
+    
+    #membershipForm input[type="text"],
+    #membershipForm select {
+        width: 100%;
+        padding: 0.9vw;
+        margin-bottom: 1.4vw;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-family: 'Futura', monospace;
+        font-size: medium;
+    }
+    
+    #membershipForm input[type="radio"],
+    #membershipForm input[type="checkbox"],
+    #membershipForm input[type="button"] {
+        margin-bottom: 1.5vw;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-family: 'Courier New', monospace;
+    }
+    
+    #membershipForm input[type="radio"],
+    #membershipForm input[type="checkbox"] {
+        width: auto;
+    }
+    
+    #membershipForm input[type="button"] {
+        color: black;
+        padding: 1.5vw 2vw;
+        cursor: pointer;
+        font-size: 1.5vw;
+        text-align: center;
+        padding: 1.5vw 2vw;
+        border: none;
+        border-radius: 4px;
+    }
+    
+    #membershipForm input[type="button"]:hover {
+        background-color: #000;
+        color: white;
+        box-shadow: 10px 0 20px rgba(226, 188, 188, 0.847);
+    }
+    
+    #buttonSubmit {
+        margin-top: 20px;
+        text-align: center;
+        /* background-color:; */
+        color: black;
+        padding: 1.5vw 2vw;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1.5vw;
+        text-align: center;
+    }
+    
+    footer {
+        background-color: inherit;
+        color: #fff;
+        padding-left: 0%;
+        text-align: left;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    #buttonSubmit:hover {
+        background-color: #000;
+        color: white;
+        box-shadow: 10px 0 20px rgba(226, 188, 188, 0.847);
+    }

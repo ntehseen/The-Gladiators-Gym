@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Membership Submit</title>
+   <link rel="stylesheet" href="stylessubmit.css" />
+</head>
+
+<body>
+   <header>
+      <svg height="100%" stroke-miterlimit="10"
+         style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1"
+         viewBox="0 0 1024 768" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+         xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+         <defs>
+            <filter color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse" height="547.281" id="Filter"
+               width="712.67" x="155.269" y="101.739">
+               <feDropShadow dx="-3.67321e-05" dy="10" flood-color="#000000" flood-opacity="0.333" in="SourceGraphic"
+                  result="Shadow" stdDeviation="5" />
+            </filter>
+         </defs>
+         <g id="Layer-1" vectornator:layerName="Layer 1">
+            <path
+               d="M855.439 626.52L810.333 626.52L594.299 194.451L534.157 314.734L690.05 626.52L644.944 626.52L512 359.84L378.264 626.52L333.158 626.52L489.051 314.734L428.91 194.451L212.875 626.52L167.769 626.52L428.91 104.239L512 269.628L594.299 104.239L855.439 626.52Z"
+               fill="currentColor" filter="url(#Filter)" stroke="none" vectornator:layerName="Text 1"
+               vectornator:shadowAngle="1.5708" vectornator:shadowColor="#000000" vectornator:shadowOffset="10"
+               vectornator:shadowOpacity="0.333" vectornator:shadowRadius="10" />
+         </g>
+      </svg>
+   </header>
+   <section id="orderSection">
+      <form id="order" name="order">
+         <table id="orderTable">
+            <caption>Order Summary</caption>
+            <tr>
+               <td>
+                  <label for="membershipTypeName">Membership Type:</label>
+                  <input type="text" name="membershipTypeName" id="membershipTypeName" readonly />
+               </td>
+               <td>
+                  <label for="membershipDuration">Membership Duration:</label>
+                  <input type="text" name="membershipDuration" id="membershipDuration" readonly />
+               </td>
+               <td>
+                  <label for="membershipCost">Membership Cost:</label>
+                  <input type="text" name="membershipCost" id="membershipCost" size="10" readonly />
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <label for="additionalServicesName">Additional Services:</label>
+                  <input type="text" name="additionalServicesName" id="additionalServicesName" readonly />
+               </td>
+               <td>
+                  <label for="additionalServicesCost">Additional Services Cost:</label>
+                  <input type="text" name="additionalServicesCost" id="additionalServicesCost" size="10" readonly />
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="rightA">Subtotal</td>
+               <td class="outcell">
+                  <input type="text" name="subtotal" id="subtotal" size="10" readonly />
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="rightA">Tax (5%)</td>
+               <td>
+                  <input type="text" name="salesTax" id="salesTax" size="10" readonly />
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="rightA">TOTAL</td>
+               <td>
+                  <input type="text" name="totalCost" id="totalCost" size="10" readonly />
+               </td>
+            </tr>
+         </table>
+
+      </form>
+   
+         <a href="checkout.html" id="subButtonLink">
+            <button type="submit" id="subButton">Proceed to Checkout</button>
+         </a>
+      
+   </section>
+
+   <script>
+      window.addEventListener("load", function () {
+         // Parse the query parameters from the URL
+         const queryString = window.location.search;
+         const urlParams = new URLSearchParams(queryString);
+
+         // Update form fields with data from query parameters
+         document.getElementById("membershipTypeName").value = urlParams.get("membershipTypeName") || "";
+         document.getElementById("membershipDuration").value = urlParams.get("membershipDuration") || "";
+         document.getElementById("membershipCost").value = urlParams.get("membershipCost") || "";
+         document.getElementById("additionalServicesName").value = urlParams.get("additionalServicesName") || "";
+         document.getElementById("additionalServicesCost").value = urlParams.get("additionalServicesCost") || "";
+         document.getElementById("subtotal").value = urlParams.get("subtotal") || "";
+         document.getElementById("salesTax").value = urlParams.get("salesTax") || "";
+         document.getElementById("totalCost").value = urlParams.get("totalCost") || "";
+
+         
+      });
+   </script>
+
+
+
+</body>
+
+</html>

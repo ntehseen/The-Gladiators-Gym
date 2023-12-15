@@ -1,0 +1,115 @@
+<!-- checkout.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Proceed to Checkout</title>
+   <link rel="stylesheet" href="stylesb.css" />
+   <script src="checkout.js" defer></script>
+</head>
+
+<body>
+   <header>
+      <svg height="100%" stroke-miterlimit="10"
+         style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1"
+         viewBox="0 0 1024 768" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+         xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+         <defs>
+            <filter color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse" height="547.281" id="Filter"
+               width="712.67" x="155.269" y="101.739">
+               <feDropShadow dx="-3.67321e-05" dy="10" flood-color="#000000" flood-opacity="0.333" in="SourceGraphic"
+                  result="Shadow" stdDeviation="5" />
+            </filter>
+         </defs>
+         <g id="Layer-1" vectornator:layerName="Layer 1">
+            <path
+               d="M855.439 626.52L810.333 626.52L594.299 194.451L534.157 314.734L690.05 626.52L644.944 626.52L512 359.84L378.264 626.52L333.158 626.52L489.051 314.734L428.91 194.451L212.875 626.52L167.769 626.52L428.91 104.239L512 269.628L594.299 104.239L855.439 626.52Z"
+               fill="currentColor" filter="url(#Filter)" stroke="none" vectornator:layerName="Text 1"
+               vectornator:shadowAngle="1.5708" vectornator:shadowColor="#000000" vectornator:shadowOffset="10"
+               vectornator:shadowOpacity="0.333" vectornator:shadowRadius="10" />
+         </g>
+      </svg>
+   </header>
+
+   <section id="orderSection">
+      <table id="orderTable">
+         <caption>Your Order</caption>
+         <!-- Your order details here -->
+      </table>
+   </section>
+
+   <section id="paySection">
+      <h1>Payment Form</h1>
+
+      <form id="payment" name="payment" method="post" action="paysubmit.html">         
+         <fieldset id="creditcard">
+            <legend>Credit Information</legend>
+
+            <label for="cardName">Name*</label>
+            <input name="cardName" id="cardName" required type="text" />              
+
+            <label>Credit Card*</label>
+            <fieldset id="cards">
+               <label class="cardLabel">
+                  <input name="credit" value="amex" type="radio" required />               
+                  <span>American Express</span>
+               </label>
+               <label class="cardLabel">               
+                  <input name="credit" value="discover" type="radio" />
+                  <span>Discover</span>
+               </label>
+               <label class="cardLabel">                              
+                  <input name="credit" value="master" type="radio"  />
+                  <span>MasterCard</span>
+               </label>
+               <label class="cardLabel">                                    
+                  <input name="credit" value="visa" type="radio"  />
+                  <span>Visa</span>
+               </label>
+            </fieldset>          
+
+            <label for="cardNumber">Credit Card Number*</label>
+            <input name="cardNumber" id="cardNumber" required type="text"
+                   pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$"/>
+
+            <label for="expMonth">Expiration Date*</label>
+            <select id="expMonth" name="expMonth">
+               <option value="mm">mm</option>
+               <option value="01">01</option>
+               <option value="02">02</option>
+               <option value="03">03</option>
+               <option value="04">04</option>
+               <option value="05">05</option>
+               <option value="06">06</option>
+               <option value="07">07</option>
+               <option value="08">08</option>
+               <option value="09">09</option>
+               <option value="10">10</option>
+               <option value="11">11</option>
+               <option value="12">12</option>
+            </select>
+            <span id="separator"> / </span>
+            <select id="expYear" name="expYear">
+               <option value="yy">yy</option>
+               <option value="2022">2022</option>
+               <option value="2023">2023</option>
+               <option value="2024">2024</option>
+               <option value="2025">2025</option>
+               <option value="2026">2026</option>
+            </select>            
+
+            <label for="cvc">CVC*</label>
+            <input name="cvc" id="cvc" required pattern="^\d{3,4}$" type="text"/>
+         </fieldset>
+
+         <p id="footnote">* Required item</p>        
+         <input type="submit" id="subButton" value="Submit Payment" />         
+      </form>
+
+  </section>
+</body>
+
+</html>

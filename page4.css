@@ -1,0 +1,145 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Ubuntu:wght@500&display=swap');
+
+#page4 {
+    min-height: 80vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* filter: invert(); */
+
+}
+
+#page4 form {
+    width: 80vw;
+    padding-left: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-right: 40px;
+    background-color: #000;
+    border-radius: 15px;
+    box-shadow: 10px 0 20px rgba(226, 188, 188, 0.847);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    font-size: 20px;
+    color: whitesmoke;
+    opacity: 0.85;
+}
+
+
+#page4 p {
+    margin-top: 0.3vw;
+    font-size: 1vw;
+    text-align: center;
+
+}
+
+#page4 h1 {
+    font-size: 8.7vw;
+    text-transform: uppercase;
+    font-family: 'Futura';
+    line-height: 7vw;
+    letter-spacing: -8px;
+    margin-top: 20px;
+    margin-bottom: 6px;
+    text-align: center;
+    gap: 4px;
+}
+
+#page4 h4 {
+    font-size: 1.5vw;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family:'Ubuntu', sans-serif;
+    display: flex;
+    text-align: center;
+}
+
+#page4 label {
+    display: flex;
+    margin-bottom: 10px;
+    font-size: 1vw;
+    background-color: #777;
+    font-family: monospace;
+    text-transform: uppercase;
+    gap: 2px;
+    
+}
+
+#page4 font {
+    font-family:'Ubuntu', sans-serif;
+    text-transform: uppercase;
+}
+
+#page4 input[type="text"],
+#page4 select {
+    width: 100%;
+    padding: .9vw;
+    margin-bottom: 1.4vw;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: 'Futura', monospace;
+    font-size: medium;
+    
+}
+
+#page4 input[type="radio"],
+#page4 input[type="checkbox"],
+#page4 input[type="button"] {
+    margin-bottom: 1.5vw;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: 'Courier New', monospace;
+}
+
+#page4 input[type="radio"],
+#page4 input[type="checkbox"] {
+    width: auto;
+}
+
+#page4 input[type="button"] {
+    /* background-color: inherit; */
+    color: black;
+    padding: 1.5vw 2vw;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.5vw;
+    text-align: center;
+}
+
+#page4 #btns :hover {
+    background-color: #000;
+    color: white;
+    box-shadow: 10px 0 20px rgba(226, 188, 188, 0.847);
+}
+
+#btns {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#btns a {
+    text-decoration: none;
+    color: inherit; /* Optional: To inherit the color from the parent */
+}
+
+
+
+
+/* Footer styles */
+/* Footer styles */
+footer {
+    background-color: inherit;
+    color: #fff;
+    padding-left: 0%;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

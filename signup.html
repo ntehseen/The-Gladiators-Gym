@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Membership Form</title>
+    <link rel="stylesheet" href="stylesa.css" />
+    <script src="script_form.js" defer></script>
+</head>
+
+<body>
+    <header>
+       
+        <svg height="100%" stroke-miterlimit="10"
+        style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1"
+        viewBox="0 0 1024 768" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+        xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+            <filter color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse" height="547.281" id="Filter"
+                width="712.67" x="155.269" y="101.739">
+                <feDropShadow dx="-3.67321e-05" dy="10" flood-color="#000000" flood-opacity="0.333"
+                    in="SourceGraphic" result="Shadow" stdDeviation="5" />
+            </filter>
+        </defs>
+        <g id="Layer-1" vectornator:layerName="Layer 1">
+            <path
+                d="M855.439 626.52L810.333 626.52L594.299 194.451L534.157 314.734L690.05 626.52L644.944 626.52L512 359.84L378.264 626.52L333.158 626.52L489.051 314.734L428.91 194.451L212.875 626.52L167.769 626.52L428.91 104.239L512 269.628L594.299 104.239L855.439 626.52Z"
+                fill="currentColor" filter="url(#Filter)" stroke="none" vectornator:layerName="Text 1"
+                vectornator:shadowAngle="1.5708" vectornator:shadowColor="#000000" vectornator:shadowOffset="10"
+                vectornator:shadowOpacity="0.333" vectornator:shadowRadius="10" />
+        </g>
+    </svg>
+
+    </header>
+    <section id="membershipFormSection">
+        <form id="membershipForm" name="membershipForm" method="get" action="membershipsubmit.html">
+            <table id="membershipTable">
+                <caption>Gym Membership Form</caption>
+                <tr>
+                    <td>
+                        <label for="membershipType">Membership Type</label>
+                        <select name="membershipType" id="membershipType">
+                            <option value="29.99">Basic Membership ($29.99/month)</option>
+                            <option value="49.99">Premium Membership ($49.99/month)</option>
+                            <option value="79.99" selected>Pro Membership ($79.99/month)</option>
+                        </select>
+                        <input type="hidden" id="membershipTypeName" name="membershipTypeName" />
+                    </td>
+                    <td class="rightA">
+                        <label for="membershipDuration">Duration</label>
+                        <select name="membershipDuration" id="membershipDuration">
+                            <option value="1" selected>1 Month</option>
+                            <option value="3">3 Months</option>
+                            <option value="6">6 Months</option>
+                            <option value="12">12 Months</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" name="membershipCost" id="membershipCost" size="10" readonly />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <fieldset>
+                            <legend>Additional Services</legend>
+                            <input type="checkbox" id="personalTraining" name="personalTraining" value="29.99" /> <label for="personalTraining">Personal Training ($29.99/session)</label><br>
+                            <input type="checkbox" id="nutritionConsultation" name="nutritionConsultation" value="19.99" /> <label for="nutritionConsultation">Nutrition Consultation ($19.99/session)</label><br>
+                        </fieldset>
+                        <input type="hidden" id="additionalServicesName" name="additionalServicesName" />
+                    </td>
+                    <td>
+                        <input type="text" name="additionalServicesCost" id="additionalServicesCost" size="10" readonly />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="rightA">Subtotal</td>
+                    <td class="outcell">
+                        <input type="text" name="subtotal" id="subtotal" size="10" readonly />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="rightA">Tax (5%)</td>
+                    <td>
+                        <input type="text" name="salesTax" id="salesTax" size="10" readonly />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="rightA">TOTAL</td>
+                    <td>
+                        <input type="text" name="totalCost" id="totalCost" size="10" readonly />
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" id="buttonSubmit" value="submit" />
+        </form>
+    </section>
+
+<!-- Add this script block at the end of your signup.html file, just before the closing </body> tag -->
+<script>
+    window.addEventListener("load", function () {
+        // Add an event listener to the form submission
+        document.forms.membershipForm.addEventListener("submit", function (event) {
+            // Serialize the form data
+            var formData = new FormData(this);
+
+            // Construct the query string from the form data
+            var queryString = Array.from(formData)
+                .map(entry => encodeURIComponent(entry[0]) + '=' + encodeURIComponent(entry[1]))
+                .join('&');
+
+            // Redirect to the membershipsubmit.html page with the form data as parameters
+            window.location.href = "membershipsubmit.html?" + queryString;
+
+            // Prevent the default form submission
+            event.preventDefault();
+        });
+
+        // ... (rest of your existing script)
+    });
+</script>
+
+    
+</body>
+
+</html>
